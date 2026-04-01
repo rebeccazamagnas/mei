@@ -1,0 +1,24 @@
+CREATE TABLE IF NOT EXISTS service_items (
+    id BIGSERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description VARCHAR(1000) NOT NULL,
+    icon VARCHAR(100) NOT NULL,
+    cta_label VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS testimonials (
+    id BIGSERIAL PRIMARY KEY,
+    customer_name VARCHAR(255) NOT NULL,
+    city VARCHAR(255) NOT NULL,
+    message VARCHAR(1000) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS leads (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(50) NOT NULL,
+    service_interest VARCHAR(255) NOT NULL,
+    message VARCHAR(1500),
+    created_at TIMESTAMP NOT NULL
+);
